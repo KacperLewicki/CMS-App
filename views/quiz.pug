@@ -2,4 +2,21 @@ extends layout
 
 block content 
     h1= title 
-    p Welcom in #{title}
+    if show
+        form(method='post')
+
+            p Jak postać jest najbardziej grywalna ?
+            ul  
+                each item in data 
+                    li 
+                        label=item.title 
+                        input(type='radio' name='quiz' value=item._id)
+            input(type="submit" value='Zaglosuj')
+            p Aby zobaczyć wyniki oddaj głos !!!
+    else    
+        h1 Dokonałeś już głosowania
+        p Wyniki 
+        ul 
+        each item in data 
+            li #{item.title} - głosów: #{item.vote} (#{Math.round(item.vote/sum*100)}%)
+        p Głosów oddano: #{sum}
