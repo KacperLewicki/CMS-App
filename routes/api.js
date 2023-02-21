@@ -1,5 +1,4 @@
 const express = require('express');
-const { search } = require('../app');
 const router = express.Router();
 const News = require('../models/news');
 const defaultSort = -1;
