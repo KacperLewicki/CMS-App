@@ -5,18 +5,18 @@ block content
     if show
         form(method='post')
 
-            p Jak postać jest najbardziej grywalna ?
+            p What programming language is worth learning ?
             ul  
                 each item in data 
                     li 
                         label=item.title 
                         input(type='radio' name='quiz' value=item._id)
             input(type="submit" value='Zaglosuj')
-            p Aby zobaczyć wyniki oddaj głos !!!
+            p Vote to see the results !!!
     else    
-        h1 Dokonałeś już głosowania
-        p Wyniki 
+        h1 You've already voted
+        p Results
         ul 
         each item in data 
-            li #{item.title} - głosów: #{item.vote} (#{Math.round(item.vote/sum*100)}%)
-        p Głosów oddano: #{sum}
+            li #{item.title} - votes: #{item.vote} (#{Math.round(item.vote/sum*100)}%)
+        p The votes have been cast: #{sum}
