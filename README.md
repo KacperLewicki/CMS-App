@@ -72,8 +72,3 @@ This documentation outlines the functionality and structure of a Content Managem
 ## Security Considerations
 
 - Admin login credentials are stored securely and should not be included in the source code.
-- # Ensure that communication with the database is secured and that proper validation checks are in place to prevent injection attacks.
-
-# CMS-app-in-express-mongodb
-
-> > > > > > > 9a8dc38bbfa1321783d084cc01cdf9eed0263913
